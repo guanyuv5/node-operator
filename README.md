@@ -1,4 +1,4 @@
-##node-operator demo开发
+## node-operator demo with operator sdk
 ### 环境准备
 
 ```bash
