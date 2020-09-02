@@ -1,0 +1,7 @@
+apiVersion: nodes.jike.com/v1alpha1
+kind: NodeOP
+metadata:
+  name: nodeop-sample
+spec:
+  # Add fields here
+  foo: bar

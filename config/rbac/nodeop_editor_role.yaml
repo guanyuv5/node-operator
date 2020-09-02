@@ -1,0 +1,24 @@
+# permissions for end users to edit nodeops.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: nodeop-editor-role
+rules:
+- apiGroups:
+  - nodes.jike.com
+  resources:
+  - nodeops
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - nodes.jike.com
+  resources:
+  - nodeops/status
+  verbs:
+  - get
