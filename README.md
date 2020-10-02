@@ -30,7 +30,7 @@ Operator SDK 提供以下工作流来开发新的 Operator：
 
 ```
 # mkdir node-operator && cd node-operator/
-# operator-sdk init --domain=jike.com --repo=github.com/jike-inc/node-operator
+# operator-sdk init --project-version=2 --license apache2 --domain=jike.com --repo=github.com/jike-inc/node-operator
 Writing scaffold for you to edit...
 Get controller runtime:
 $ go get sigs.k8s.io/controller-runtime@v0.6.2
@@ -148,7 +148,7 @@ customresourcedefinition.apiextensions.k8s.io/nodeops.nodes.jike.com created
 - 启动manager：
 
 ```bash
-# ./manager --kubeconfig=/root/.kube/config --hostname=172.21.240.97
+# ./manager --kubeconfig=/root/.kube/config --hostname=172.21.240.97 --metrics-addr=0.0.0.0:8090
 2020-09-02T22:20:21.857+0800	INFO	controller-runtime.metrics	metrics server is starting to listen	{"addr": ":8080"}
 2020-09-02T22:20:21.858+0800	INFO	setup	starting manager
 2020-09-02T22:20:21.858+0800	INFO	controller-runtime.manager	starting metrics server	{"path": "/metrics"}
